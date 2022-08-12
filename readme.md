@@ -2,8 +2,8 @@
 
 ブラウザにターミナルを埋め込み、httpsでwettyと通信することを目標にした練習用リポジトリ
 
+![スクリーンショット 2022-08-12 211222](https://user-images.githubusercontent.com/65057976/184351573-eb7b6fa4-14db-420b-8f46-5dc8d9109279.png)
 
-![terminal](https://user-images.githubusercontent.com/65057976/184346787-1160ba32-e3a2-440c-b4c7-08f09c54c5ee.png)
 
 ## install
 ```
