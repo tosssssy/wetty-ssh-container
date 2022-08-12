@@ -15,5 +15,5 @@ RUN echo -n 'test:test' | chpasswd
 # RUN openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 30000 -nodes
 
 
-ENTRYPOINT [ "yarn","start","--ssh-host","127.0.0.1"]
+ENTRYPOINT [ "yarn","start"]
 # ENTRYPOINT [ "yarn","start","--ssl-key", "key.pem","--ssl-cert","cert.pem" ]

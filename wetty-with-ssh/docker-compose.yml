@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: wetty/Dockerfile
     container_name: wetty
+    entrypoint:
+      ['yarn', 'start', '--ssh-host', '127.0.0.1', '--allow-iframe', 'true']
     tty: true
     ports:
       - '3000:3000'
