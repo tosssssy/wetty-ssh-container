@@ -1,0 +1,21 @@
+version: '3'
+services:
+  wetty:
+    image: wettyoss/wetty
+    container_name: wetty
+    tty: true
+    ports:
+      - '3000:3000'
+    environment:
+      SSHHOST: 'ssh'
+      SSHPORT: 22
+      SSHUSER: 'root'
+      SSHPASS: 'root'
+
+  ssh:
+    build:
+      context: .
+      dockerfile: ssh/Dockerfile
+    image: ssh
+    container_name: ssh
+    tty: true
