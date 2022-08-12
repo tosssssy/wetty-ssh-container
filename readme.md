@@ -15,3 +15,7 @@ docker compose up --build
 docker compose down
 docker image rm <対象ID>
 ```
+
+
+
+![terminal](https://user-images.githubusercontent.com/65057976/184346787-1160ba32-e3a2-440c-b4c7-08f09c54c5ee.png)
