@@ -22,5 +22,5 @@ docker image rm <対象ID>
 ## iframeが接続拒否される時
 originがlocalhostになっているかを確認する。
 
-おすすめはvscodeの拡張機能「Live Server」を使用し、起動して`http://127.0.0.1:5500`にアクセスする。その後`http://localhost:5500`に書き換える
+おすすめはvscodeの拡張機能「Live Server」を使用し、起動して`http://127.0.0.1:5500/index.html`にアクセスする。その後`http://localhost:5500/index.html`に書き換える
 
