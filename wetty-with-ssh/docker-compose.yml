@@ -1,12 +1,52 @@
 version: '3'
 services:
-  wetty:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+
+  wetty_1:
     build:
       context: .
       dockerfile: wetty/Dockerfile
-    container_name: wetty
+    image: wetty
+    container_name: wetty_1
     entrypoint:
-      ['yarn', 'start', '--ssh-host', '127.0.0.1', '--allow-iframe', 'true']
+      [
+        'yarn',
+        'start',
+        '--base',
+        '/',
+        '--ssh-host',
+        '127.0.0.1',
+        '--allow-iframe',
+        'true',
+      ]
     tty: true
     ports:
-      - '3000:3000'
+      - 3001:3000
+
+  wetty_2:
+    build:
+      context: .
+      dockerfile: wetty/Dockerfile
+    image: wetty
+    container_name: wetty_2
+    entrypoint:
+      [
+        'yarn',
+        'start',
+        '--base',
+        '/',
+        '--ssh-host',
+        '127.0.0.1',
+        '--allow-iframe',
+        'true',
+      ]
+    tty: true
+    ports:
+      - 3002:3000
